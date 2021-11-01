@@ -1,9 +1,8 @@
-import React from 'react';
-import Tts from './Components/tts'
+import React from 'react'
+import Tts from './Components/Tts'
 
 export default function App () {
   return (
-      <Tts />
-
-  );
+      <Tts/>
+  )
 }

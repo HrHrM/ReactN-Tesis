@@ -16,7 +16,7 @@ export default function Tts() {
 
     return (
         <View>
-            <View style = { {height: 300} }>
+            <View>
        
             </View>
 

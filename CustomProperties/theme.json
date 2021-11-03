@@ -60,5 +60,16 @@
   "color-basic-transparent-300": "rgba(128, 128, 128, 0.24)",
   "color-basic-transparent-400": "rgba(128, 128, 128, 0.32)",
   "color-basic-transparent-500": "rgba(128, 128, 128, 0.4)",
-  "color-basic-transparent-600": "rgba(128, 128, 128, 0.48)"
+  "color-basic-transparent-600": "rgba(128, 128, 128, 0.48)",
+  "text-basic-color": "$color-basic-400",
+  "color-primary-default": "$color-primary-500",
+  "color-primary-hover": "$color-primary-400",
+  "color-primary-focus": "$color-primary-600",
+  "color-primary-active": "$color-primary-600",
+  "color-primary-disabled": "$color-basic-transparent-300",
+  "color-primary-default-border": "$color-primary-default",
+  "color-primary-hover-border": "$color-primary-hover",
+  "color-primary-focus-border": "$color-primary-700",
+  "color-primary-active-border": "$color-primary-active",
+  "color-primary-disabled-border": "$color-primary-disabled"
 }

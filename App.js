@@ -1,26 +1,36 @@
-import React                from 'react'
-import Tts                  from './Components/Tts'
-import * as eva             from '@eva-design/eva'
-import { default as theme } from './CustomProperties/theme.json'
-import { ApplicationProvider, 
-         Layout, 
-         Text }             from '@ui-kitten/components'
+// import React from 'react';
+// import * as eva from '@eva-design/eva';
+// import { ApplicationProvider, IconRegistry, Layout, Text } from '@ui-kitten/components';
+// import { EvaIconsPack } from '@ui-kitten/eva-icons';
+// import { LoginButton } from './Components/ButtonFB';
 
-const HomeScreen = () => (
-  <Layout style = {{ flex: 1, justifyContent: 'center', alignItems: 'center' }} >
-    <Text category = 'h1'> Kaede app </Text>
-  </Layout>
-)
+// const HomeScreen = () => (
+//   <Layout style={{ height: 400, justifyContent: 'center', alignItems: 'center'}}>
+//     <Text category='h1'>Kaede</Text>
+//   </Layout>
+// );
+
+// export default () => (
+//   <>
+//     <IconRegistry icons={EvaIconsPack} />
+//     <ApplicationProvider {...eva} theme={eva.light}>
+//       <HomeScreen />
+//       <LoginButton />
+//     </ApplicationProvider>
+//   </>
+// );
+
+import React                                 from 'react';
+import * as eva                              from '@eva-design/eva';
+import { ApplicationProvider, IconRegistry } from '@ui-kitten/components';
+import { EvaIconsPack }                      from '@ui-kitten/eva-icons';
+import { AppNavigator }                      from './navigator.js'
 
 export default () => (
-  <ApplicationProvider {...eva} theme = {{ ...eva.dark, ...theme }} >
-    <HomeScreen />
-  </ApplicationProvider>
-)
-
-
-// export default function App () {
-//   return (
-//       
-//   )
-// }
+  <>
+    <IconRegistry icons={EvaIconsPack}/>
+    <ApplicationProvider {...eva} theme={eva.light}>
+      <AppNavigator/>
+    </ApplicationProvider>
+  </>
+);

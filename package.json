@@ -9,6 +9,9 @@
   },
   "dependencies": {
     "@eva-design/eva": "^2.1.1",
+    "@react-native-community/masked-view": "^0.1.10",
+    "@react-navigation/bottom-tabs": "^6.0.9",
+    "@react-navigation/drawer": "^6.1.8",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/stack": "^6.0.11",
     "@ui-kitten/components": "^5.1.1",
@@ -19,15 +22,18 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-41.0.0.tar.gz",
-    "react-native-gesture-handler": "^1.10.3",
+    "react-native-gesture-handler": "~1.10.2",
     "react-native-google-cloud-speech-to-text": "^0.5.4",
     "react-native-paper": "^4.9.2",
-    "react-native-safe-area-context": "3.2.0",
+    "react-native-reanimated": "~2.1.0",
+    "react-native-safe-area-context": "^3.2.0",
     "react-native-screens": "~3.0.0",
     "react-native-svg": "12.1.0",
     "react-native-tts": "^4.1.0",
     "react-native-vector-icons": "^8.1.0",
-    "react-native-web": "^0.17.1"
+    "react-native-web": "^0.17.1",
+    "react-navigation": "^4.4.4",
+    "react-navigation-stack": "^2.10.4"
   },
   "devDependencies": {
     "@babel/core": "^7.15.5"

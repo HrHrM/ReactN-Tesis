@@ -16,7 +16,7 @@ export default function Tts() {
 
     return (
         <View>
-            <View style = { {height: 300} }>
+            <View style = { {flex: 1} }>
        
             </View>
 
@@ -61,6 +61,6 @@ export default function Tts() {
 const styles = StyleSheet.create({
     scrollView: {
         backgroundColor: 'pink',
-        marginHorizontal: 20,
+        marginHorizontal: 0,
     }
 })

@@ -50,6 +50,9 @@ export const VideosScreen = () => {
                 <Category img = {require('../assets/Pictures/water.jpg')} name = 'I need Water' />
                 <Category img = {require('../assets/Pictures/food.jpg')}  name = 'I need Food' />
                 <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+                <Category img = {require('../assets/Pictures/water.jpg')} name = 'I need Water' />
+                <Category img = {require('../assets/Pictures/food.jpg')}  name = 'I need Food' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
               </ScrollView>
             </View>
             <ScrollView showsHorizontalScrollIndicator = {false} >
@@ -69,10 +72,19 @@ export const VideosScreen = () => {
               <Text style = {{ fontWeight: '100', marginTop: 10, textAlign: 'center' }}>
                 Please could you tell me what time it is?
               </Text>
-              <View style = {{ width: width - 40, height: 300, marginTop: 20, paddingBottom: 100}}>
+              <View style = {{ width: width - 40, height: 300, marginTop: 20}}>
                 <Image
                   style  = {{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddd' }}
                   source = {require('../assets/Pictures/time.jpg')}
+                />
+              </View>
+              <Text style = {{ fontWeight: '100', marginTop: 10, textAlign: 'center' }}>
+                Please could you tell me what time it is?
+              </Text>
+              <View style = {{ width: width - 40, height: 300, marginTop: 20, paddingBottom: 100}}>
+                <Image
+                  style  = {{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddd' }}
+                  source = {require('../assets/Pictures/water.jpg')}
                 />
               </View>
               

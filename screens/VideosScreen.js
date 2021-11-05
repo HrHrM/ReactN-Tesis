@@ -55,7 +55,7 @@ export const VideosScreen = () => {
                 <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
               </ScrollView>
             </View>
-            <ScrollView showsHorizontalScrollIndicator = {false} >
+            <ScrollView showsVerticalScrollIndicator = {false} >
               <View style = {{ marginTop: 40, paddingHorizontal: 20 }}>
               <Text style = {{ fontSize: 24, fontWeight: '700' }} >
                 Or maybe you need help with another thing 

@@ -21,7 +21,7 @@ export default function Tts() {
             </View>
 
             <TextInput 
-                style        = {{ height: 40, borderColor: 'gray', borderWidth: 1 }}
+                style        = {{ height: 40, borderColor: 'gray', borderWidth: 1, backgroundColor: 'white' }}
                 placeholder  = 'Type here'
                 onChangeText = {text => {
                     setValue(text)

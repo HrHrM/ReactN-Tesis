@@ -26,13 +26,13 @@ export const HomeScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
         <TopNavigation
-          title         = "Stories"
+          title         = "Home"
           alignment     = "center"
           accessoryLeft = {renderDrawerAction}
         />
       <Divider/>
       <Layout style = {{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'pink' }}>
-        <Button onPress = {navigateDetails}>Go to details</Button>
+        <Button onPress = {navigateDetails}>Go to my Voice</Button>
       </Layout>
     </SafeAreaView>
   );

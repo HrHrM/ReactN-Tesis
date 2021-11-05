@@ -10,7 +10,7 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 export default () => (
   <>
     <IconRegistry icons = {EvaIconsPack}/>
-    <ApplicationProvider {...eva} theme = {eva.dark}>
+    <ApplicationProvider {...eva} theme = {eva.light}>
         <SafeAreaProvider>
             <AppNavigator />
         </SafeAreaProvider>

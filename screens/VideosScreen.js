@@ -12,8 +12,11 @@ import {
   ScrollView, 
   View, 
   Image, 
-  Dimensions }                                 from 'react-native';
+  Dimensions
+ }                                             from 'react-native';
 import Category                                from '../Components/Explore/Category'
+
+const { height, width } = Dimensions.get('window')
 
 export const VideosScreen = () => {
   const navigation = useNavigation();
@@ -49,14 +52,33 @@ export const VideosScreen = () => {
                 <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
               </ScrollView>
             </View>
-            <View style = {{ marginTop: 40, paddingHorizontal: 20 }}>
+            <ScrollView>
+              <View style = {{ marginTop: 40, paddingHorizontal: 20 }}>
               <Text style = {{ fontSize: 24, fontWeight: '700' }} >
                 Or maybe you need help with another thing 
               </Text>
               <Text style = {{ fontWeight: '100', marginTop: 10, textAlign: 'center' }}>
                 Hello, I need some help
               </Text>
+              <View style = {{ width: width - 40, height: 200, marginTop: 20}}>
+                <Image
+                  style  = {{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddd' }}
+                  source = {require('../assets/Pictures/help.jpg')}
+                />
+              </View>
+              <Text style = {{ fontWeight: '100', marginTop: 10, textAlign: 'center' }}>
+                Please could you tell me what time it is?
+              </Text>
+              <View style = {{ width: width - 40, height: 300, marginTop: 20, paddingBottom: 100}}>
+                <Image
+                  style  = {{ flex: 1, height: null, width: null, resizeMode: 'cover', borderRadius: 5, borderWidth: 1, borderColor: '#dddd' }}
+                  source = {require('../assets/Pictures/time.jpg')}
+                />
+              </View>
+              
             </View>
+            </ScrollView>
+            
           </View>
         </ScrollView>
       </Layout>

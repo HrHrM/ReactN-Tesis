@@ -47,11 +47,11 @@ export const VideosScreen = () => {
             <View style = {{ height: 130, marginTop: 20 }}>
               <ScrollView horizontal = {true} 
                           showsHorizontalScrollIndicator = {false} >
-                <Category img = {require('../assets/Pictures/water.jpg')} name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}  name = 'I need Food' />
+                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
+                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
                 <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
-                <Category img = {require('../assets/Pictures/water.jpg')} name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}  name = 'I need Food' />
+                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
+                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
                 <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
               </ScrollView>
             </View>

@@ -6,7 +6,6 @@ import {
     Image
 }                                   from 'react-native'
 
-
 export default function Category ({ img, name }) {
 
     return (

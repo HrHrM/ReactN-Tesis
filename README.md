@@ -19,6 +19,16 @@ A couple of days ago I Googled around to find a quick tutorial on how to make a 
 
 For development, you will need Node.js, Yarn or NPM installed in your development machine
 
+## Used Libraries
+
++ React-Native
++ Expo for the TTS
++ UI Kitten for the navigation and screens
++ React Navigation for the Navigation
++ React-native Base for the login and sing up
+
+
+
 ## Getting Started
 
 ```sh

@@ -4,8 +4,7 @@ import { SafeAreaView }           from 'react-native-safe-area-context'
 import { 
   MaterialCommunityIcons, 
   MaterialIcons }                 from "@expo/vector-icons"
-import { 
-  Button, 
+import {  
   Divider, 
   Layout, 
   TopNavigation, 
@@ -16,11 +15,15 @@ import {
   ImageBackground, 
   Dimensions,
   View, 
-  StyleSheet }                    from 'react-native'
+  StyleSheet,
+  Alert }                        from 'react-native'
 import { 
   Icon, 
   NativeBaseProvider,
-  Input }                        from 'native-base'
+  Input, 
+  Checkbox,
+  Center,
+  Button }                        from 'native-base'
 
 
 
@@ -37,6 +40,27 @@ export const LoginScreen = ({ navigation }) => {
   const BackAction = () => (
     <TopNavigationAction icon = {ArrowIosBackIcon} onPress = {navigateBack}/>
   );
+
+  const showAlert = () =>
+  Alert.alert(
+    "Aviso programado",
+    "No se detecta conexión a internet, verifique su conexión e intente denuevo",
+    [
+      {
+        text: "Firebase",
+        onPress: () => Alert.alert("Firebase", 'No se detecta conexión a los servidores de Firebase, verifique su conexión e intente denuevo'),
+        style: "cancel",
+      },
+    ],
+    {
+      cancelable: true,
+      onDismiss: () =>
+        Alert.alert(
+          'Alerta cancelada', "Verificación cancelada"
+        ),
+    }
+  );
+
 
     return (
       <SafeAreaView style = {{ flex: 1 }} >
@@ -67,13 +91,10 @@ export const LoginScreen = ({ navigation }) => {
             <View style = {styles.bottomView}>
                 
                 <View style = {{padding: 30}}>
-                  <Text style = {{color: '#4632A1', fontSize: 20}} >Bienvenido</Text>
-                  <Text>¿No tiene una cuenta?
-                    <Text style = {{color: 'purple', fontStyle: 'italic'}} >
-                     {' '} 
-                     Registrese ahora 
-                     </Text>
-                  </Text>
+                  <Text style = {{color: '#4632A1', fontSize: 20}} >Bienvenido, Velou.</Text>
+                    <Text style = {{color: 'black', fontStyle: 'italic'}} >
+                      Ingrese sus datos para poder entrar en su cuenta. 
+                    </Text>
                   <View style = {styles.formContainer}>
                   <Text style = {{color: '#BCBCBC', fontSize: 12}}>
                     Porfavor coloque su e-mail
@@ -99,9 +120,34 @@ export const LoginScreen = ({ navigation }) => {
                     />
                   </View>
                   <View style = {styles.forgotPassView} >
-                    <View style = {{flex:1, marginLeft: 20}}>
-                    
+                    {/* <View style = {{flex:1, marginLeft: 0}}>
+                      <Text style = {{color: '#8f9195', alignSelf: 'flex-end'}} >
+                        ¿Olvido su contraseña?
+                      </Text>
+                    </View> */}
+                    <View style = {{flex:1, marginLeft: 0}}>
+                      <Text style = {{color: '#8f9195', alignSelf: 'flex-start'}} >
+                       <Checkbox checked = {false} color = 'black' aria-label = 'Remember me'
+                                 style = {{width: 17, height: 17}} />
+                       {'  '}Recuerdame
+                      </Text>
                     </View>
+                  </View>
+                  <View style = {styles.loginButton} >
+                    <Button onPress = {showAlert}  style = {[styles.Button, styles.shadowBtn, {shadowColor:'#00acee'},]} >
+                      <Text style = {{fontSize: 20, color: '#FFFFFF'}} >Login</Text>
+                    </Button>
+                  </View>
+                  <View style = {styles.loginButton}>
+                  <Text style = {{textAlign: 'center', padding: 20}}>¿No tiene una cuenta?
+                    <Text style = {{color: '#4632A1', fontStyle: 'italic', textAlign: 'center'}} >
+                     {' '} 
+                     Registrese ahora 
+                     </Text>
+                  </Text>
+                    <Button style = {[styles.regButton, styles.shadowBtn, {shadowColor:'purple'},]} onPress = {navigateRegister}>
+                      <Text style = {{fontSize: 20, color: '#FFFFFF'}}>Registrarse</Text>
+                    </Button>
                   </View>
                 </View>
             </View>
@@ -123,6 +169,7 @@ const styles = StyleSheet.create({
     fontSize: 20,
     fontWeight: 'bold',
     paddingTop: 20,
+    justifyContent: 'center',
   },
   bottomView:{
     flex: 1.5,
@@ -150,6 +197,30 @@ const styles = StyleSheet.create({
     marginTop: 20,
     flexDirection: 'row',
   },
+  loginButton: {
+    height: 70, 
+    justifyContent: 'center', 
+    alignItems: 'center'},
+  Button: {
+    borderRadius: 20, 
+    backgroundColor: '#4632A1',
+    alignSelf: 'center',
+    width: Dimensions.get('window').width / 2,
+    justifyContent: 'center',
+  },
+  regButton: {
+    borderRadius: 20, 
+    backgroundColor: '#4632A1',
+    alignSelf: 'center',
+    width: Dimensions.get('window').width / 2,
+    justifyContent: 'center',
+  },
+  shadowBtn: {
+    shadowOffset:{width: 1, height:10},
+    shadowOpacity: 10,
+    shadowRadius: 3,
+    elevation: 15,
+  }
 })
   // return (
   //   <SafeAreaView style = {{ flex: 1 }}>

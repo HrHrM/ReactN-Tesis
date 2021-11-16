@@ -18,26 +18,15 @@ export default () => (
   </>
 );
 
-// *****Default Code****
-/* import { StatusBar } from 'expo-status-bar';
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-
-export default function App() {
-  return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
-  );
-}
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
- */
+// Querido colega programador:
+//
+// Cuando escribí este código, solo Dios y yo 
+// sabíamos como funcionaba.
+// Ahora, ¡Solo Dios lo sabe!
+//
+// Así que si esta tratando de "Optimizarlo"
+// y fracasa (seguramente), por favor,
+// incremente el contador a continuación
+// como una advertencia para su siguiente colega:
+//
+// total_horas_perdidas_aquí: 0

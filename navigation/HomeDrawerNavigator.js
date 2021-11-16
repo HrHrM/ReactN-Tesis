@@ -36,7 +36,7 @@ const DrawerContent = ({ navigation, state }) => {
               source = {require("../assets/icon.png")}
             />
             <Text style = {styles.profileName} category = "h6">
-              To the Moon
+              Velou's ear 
             </Text>
           </View>
         </Layout>

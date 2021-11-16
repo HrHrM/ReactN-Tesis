@@ -3,7 +3,8 @@ import { ArrowIosBackIcon }       from '../assets/icons'
 import { SafeAreaView }           from 'react-native-safe-area-context'
 import { 
   MaterialCommunityIcons, 
-  MaterialIcons }                 from "@expo/vector-icons"
+  MaterialIcons,
+  FontAwesome5 }                  from "@expo/vector-icons"
 import {  
   Divider, 
   Layout, 
@@ -75,15 +76,15 @@ export const LoginScreen = ({ navigation }) => {
 
               <View style = {styles.brandView}>
                 <Icon
-                  as    ={MaterialCommunityIcons}
-                  name  ="login"
+                  as    ={FontAwesome5}
+                  name  ="sign-language"
                   size  ={16}
                   color ="#ffffff"
                  _dark  ={{
                   color: "warmGray.50",
                  }}
                 /> 
-              <Text style = {styles.brandViewText}>Login to my voice, Velou</Text>
+              <Text style = {styles.brandViewText}>Login para usar mi voz, Velou</Text>
               </View>
 
             </ImageBackground>

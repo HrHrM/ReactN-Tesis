@@ -108,7 +108,7 @@ export const RegisterScreen = ({ navigation }) => {
                   </Text>
                     <Input 
                       label        = 'name'
-                      placeholder  = 'Johnny Armando'
+                      placeholder  = 'Geoff Marcon'
                       status       = 'Control'
                       keyboardType = 'default'
                       style        = {styles.inputPass}
@@ -118,7 +118,7 @@ export const RegisterScreen = ({ navigation }) => {
                   </Text>
                     <Input 
                       label        = 'last name'
-                      placeholder  = 'Bohorquez Rondon'
+                      placeholder  = 'Keighley'
                       status       = 'Control'
                       keyboardType = 'default'
                       style        = {styles.inputPass}

@@ -21,8 +21,8 @@ const BottomTabBar = ({ navigation, state }) => (
             appearance    = 'noIndicator'
             selectedIndex = {state.index}
             onSelect      = {index => navigation.navigate(state.routeNames[index])}>
-            <BottomNavigationTab title = 'Home'      icon = {ActivityIcon}/>
-            <BottomNavigationTab title = 'Pictures'  icon = {VideoIcon}/>
+            <BottomNavigationTab title = 'Inicio'      icon = {ActivityIcon}/>
+            <BottomNavigationTab title = 'Imagenes'    icon = {VideoIcon}/>
         </BottomNavigation>
     </View>
   

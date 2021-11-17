@@ -31,7 +31,7 @@ export const VideosScreen = () => {
   return (
     <SafeAreaView style = {{ flex: 1 }}>
       <TopNavigation
-          title         = "My Pictures"
+          title         = "Mi voz"
           alignment     = "center"
           accessoryLeft = {renderDrawerAction}
         />
@@ -42,7 +42,24 @@ export const VideosScreen = () => {
           scrollEventThrottle = {16}>
           <View style = {{flex: 1, backgroundColor: 'white' , paddingTop: 20}}>
             <Text style ={{fontSize:24, fontWeight:'700', paddingHorizontal: 20}}>
-              What can I help you with my voice today, Velou?
+              ¿En que te puedo ayudar hoy con mi voz, Velou?
+            </Text>
+            <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
+                ¿Te puedo ayudar con opciones basicas?
+              </Text>
+            <View style = {{ height: 130, marginTop: 20 }}>
+              <ScrollView horizontal = {true} 
+                          showsHorizontalScrollIndicator = {false} >
+                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
+                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
+                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+              </ScrollView>
+            </View>
+            <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
+              ¿Te puedo ayudar con algo relacionado a una conversación?
             </Text>
             <View style = {{ height: 130, marginTop: 20 }}>
               <ScrollView horizontal = {true} 
@@ -55,7 +72,50 @@ export const VideosScreen = () => {
                 <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
               </ScrollView>
             </View>
-            <ScrollView showsVerticalScrollIndicator = {false} >
+            <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
+              ¿Te puedo ayudar con algo relacionado al tiempo?
+            </Text>
+            <View style = {{ height: 130, marginTop: 20 }}>
+              <ScrollView horizontal = {true} 
+                          showsHorizontalScrollIndicator = {false} >
+                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
+                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
+                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+              </ScrollView>
+            </View>
+            <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
+              ¿Te puedo ayudar con algo relacionado a la hora del reloj?
+            </Text>
+            <View style = {{ height: 130, marginTop: 20 }}>
+              <ScrollView horizontal = {true} 
+                          showsHorizontalScrollIndicator = {false} >
+                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
+                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
+                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+              </ScrollView>
+            </View>
+            <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
+              ¿Te puedo ayudar con algo relacionado al entretenimiento?
+            </Text>
+            <View style = {{ height: 130, marginTop: 20 }}>
+              <ScrollView horizontal = {true} 
+                          showsHorizontalScrollIndicator = {false} >
+                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
+                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
+                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+              </ScrollView>
+            </View>
+
+            {/* <ScrollView showsVerticalScrollIndicator = {false} >
               <View style = {{ marginTop: 40, paddingHorizontal: 20 }}>
               <Text style = {{ fontSize: 24, fontWeight: '700' }} >
                 Or maybe you need help with another thing 
@@ -89,7 +149,7 @@ export const VideosScreen = () => {
               </View>
               
             </View>
-            </ScrollView>
+            </ScrollView> */}
             
           </View>
         </ScrollView>

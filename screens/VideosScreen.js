@@ -50,12 +50,12 @@ export const VideosScreen = () => {
             <View style = {{ height: 130, marginTop: 20 }}>
               <ScrollView horizontal = {true} 
                           showsHorizontalScrollIndicator = {false} >
-                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
-                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'Necesito agua' />
+                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'Necesito comida' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'Necesito usar el baño' />
+                <Category img = {require('../assets/Pictures/out.jpg')}      name = 'Necesito salir' />
+                <Category img = {require('../assets/Pictures/help.jpg')}     name = 'Necesito ayuda' />
+                <Category img = {require('../assets/Pictures/message.jpg')}  name = 'Necesito enviar un mensaje' />
               </ScrollView>
             </View>
             <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
@@ -64,12 +64,17 @@ export const VideosScreen = () => {
             <View style = {{ height: 130, marginTop: 20 }}>
               <ScrollView horizontal = {true} 
                           showsHorizontalScrollIndicator = {false} >
-                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
-                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+                <Category img = {require('../assets/Pictures/hi.png')}       name = 'Hola' />
+                <Category img = {require('../assets/Pictures/day.png')}      name = 'Buenos días' />
+                <Category img = {require('../assets/Pictures/yes.png')}      name = 'Si' />
+                <Category img = {require('../assets/Pictures/no.png')}       name = 'No' />
+                <Category img = {require('../assets/Pictures/please.png')}   name = 'Por favor' />
+                <Category img = {require('../assets/Pictures/how.png')}      name = '¿Cómo estas?' />
+                <Category img = {require('../assets/Pictures/pleasure.jpg')} name = 'Mucho gusto' />
+                <Category img = {require('../assets/Pictures/bye.jpg')}      name = 'Adios' />
+                <Category img = {require('../assets/Pictures/later.png')}    name = 'Hasta luego' />
+                <Category img = {require('../assets/Pictures/tomorrow.png')} name = 'Nos vemos Mañana' />
+                <Category img = {require('../assets/Pictures/night.png')}    name = 'Buenas noches' />
               </ScrollView>
             </View>
             <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
@@ -78,12 +83,16 @@ export const VideosScreen = () => {
             <View style = {{ height: 130, marginTop: 20 }}>
               <ScrollView horizontal = {true} 
                           showsHorizontalScrollIndicator = {false} >
-                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
-                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+                <Category img = {require('../assets/Pictures/now.png')}       name = 'Ahora' />
+                <Category img = {require('../assets/Pictures/before.png')}    name = 'Antes' />
+                <Category img = {require('../assets/Pictures/after.png')}     name = 'Despues' />
+                <Category img = {require('../assets/Pictures/InNight.png')}   name = 'En la noche' />
+                <Category img = {require('../assets/Pictures/food.jpg')}      name = 'Mañana' />
+                <Category img = {require('../assets/Pictures/today.png')}     name = 'Hoy' />
+                <Category img = {require('../assets/Pictures/yesterday.png')} name = 'Ayer' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')}  name = 'En la mañana' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')}  name = 'Es muy tarde' />
+                <Category img = {require('../assets/Pictures/bathroom.jpg')}  name = 'Es muy temprano' />
               </ScrollView>
             </View>
             <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>

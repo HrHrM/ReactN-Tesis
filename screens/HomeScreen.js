@@ -41,7 +41,7 @@ export const HomeScreen = () => {
   return (
     <SafeAreaView style={{ flex: 1 }}>
         <TopNavigation
-          title         = "Home"
+          title         = "Inicio"
           alignment     = "center"
           accessoryLeft = {renderDrawerAction}
         />

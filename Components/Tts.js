@@ -1,11 +1,16 @@
 import React, { useState } from 'react'
 import { View, 
-         Button, 
+         Dimensions, 
          TextInput, 
          SafeAreaView, 
          ScrollView, 
          StyleSheet }      from 'react-native'
 import Pp                  from './Pp'
+import { 
+    Button, 
+    NativeBaseProvider,
+    Text 
+}                          from 'native-base'
 
 
 export default function Tts() {
@@ -15,14 +20,15 @@ export default function Tts() {
     const [ id, setId ]             = useState(0)
 
     return (
+        <NativeBaseProvider>
         <View>
-            <View style = { {flex: 1} }>
+            <View style = { {flex: 1, paddingBottom: 30} }>
        
             </View>
 
             <TextInput 
-                style        = {{ height: 40, borderColor: 'gray', borderWidth: 1, backgroundColor: 'white' }}
-                placeholder  = 'Type here'
+                style        = {styles.input}
+                placeholder  = 'Escriba lo que quiere decir aquí'
                 onChangeText = {text => {
                     setValue(text)
                     console.log(value)
@@ -40,9 +46,29 @@ export default function Tts() {
                     console.log(elements)
                 }}
                 title = 'Lere'
-                color = '#841584'
-                accessibilityLabel = 'Learn more about this purple button'
-            />
+                color = '#4632A1'
+                accessibilityLabel = 'Input button'
+                style = {styles.button}
+            >
+                Lere
+            </Button>
+            <Button 
+                onPress = {() => {
+                    // var x = {
+                    //     id: id,
+                    //     word: value
+                    // }
+                    // setId(id + 1)
+                    // setElements(elements => [ ...elements, x ])
+                    // console.log(elements)
+                }}
+                title = 'Lere'
+                color = '#4632A1'
+                accessibilityLabel = 'Delete button'
+                style = {styles.buttonDel}
+            >
+                Tap aquí para borrar sus previos pensamientos
+            </Button>
             <SafeAreaView>
                 <ScrollView style = {styles.scrollView}>
                     {
@@ -55,12 +81,44 @@ export default function Tts() {
                 </ScrollView>
             </SafeAreaView>
         </View>
+        </NativeBaseProvider>
     )
 }
 
 const styles = StyleSheet.create({
     scrollView: {
-        backgroundColor: 'pink',
+        backgroundColor: '#FFFFFF',
         marginHorizontal: 0,
+    },
+    button:{
+        borderRadius: 20, 
+        backgroundColor: '#4632A1',
+        alignSelf: 'center',
+        width: 250,
+        justifyContent: 'center',
+        height: 40,
+    },
+    buttonDel: {
+        borderRadius: 20, 
+        backgroundColor: '#4632A1',
+        alignSelf: 'center',
+        width: 350,
+        justifyContent: 'center',
+        height: 40,
+        marginTop: 20,
+        marginBottom: 30,
+    },
+    input: {
+        marginBottom: 20,
+        height: 40, 
+        borderColor: 'gray', 
+        borderWidth: 1, 
+        backgroundColor: 'white',
+        width: 300,
+        justifyContent: 'center',
+        alignItems: 'center',
+        alignSelf: 'center',
+        borderRadius: 20,
+        paddingLeft: 20,
     }
 })

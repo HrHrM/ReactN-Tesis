@@ -69,7 +69,7 @@ export const VideosScreen = () => {
                 <Category img = {require('../assets/Pictures/yes.png')}      name = 'Si' />
                 <Category img = {require('../assets/Pictures/no.png')}       name = 'No' />
                 <Category img = {require('../assets/Pictures/please.png')}   name = 'Por favor' />
-                <Category img = {require('../assets/Pictures/how.png')}      name = '¿Cómo estas?' />
+                <Category img = {require('../assets/Pictures/how.png')}      name = '¿Cómo estás?' />
                 <Category img = {require('../assets/Pictures/pleasure.jpg')} name = 'Mucho gusto' />
                 <Category img = {require('../assets/Pictures/bye.jpg')}      name = 'Adios' />
                 <Category img = {require('../assets/Pictures/later.png')}    name = 'Hasta luego' />
@@ -90,37 +90,22 @@ export const VideosScreen = () => {
                 <Category img = {require('../assets/Pictures/food.jpg')}      name = 'Mañana' />
                 <Category img = {require('../assets/Pictures/today.png')}     name = 'Hoy' />
                 <Category img = {require('../assets/Pictures/yesterday.png')} name = 'Ayer' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')}  name = 'En la mañana' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')}  name = 'Es muy tarde' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')}  name = 'Es muy temprano' />
-              </ScrollView>
-            </View>
-            <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
-              ¿Te puedo ayudar con algo relacionado a la hora del reloj?
-            </Text>
-            <View style = {{ height: 130, marginTop: 20 }}>
-              <ScrollView horizontal = {true} 
-                          showsHorizontalScrollIndicator = {false} >
-                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
-                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+                <Category img = {require('../assets/Pictures/inMorning.png')} name = 'En la mañana' />
+                <Category img = {require('../assets/Pictures/early.jpg')}     name = 'Es muy temprano' />
               </ScrollView>
             </View>
             <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
               ¿Te puedo ayudar con algo relacionado al entretenimiento?
             </Text>
-            <View style = {{ height: 130, marginTop: 20 }}>
+            <View style = {{ height: 200, marginTop: 20, paddingBottom: 1 }}>
               <ScrollView horizontal = {true} 
                           showsHorizontalScrollIndicator = {false} >
-                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
-                <Category img = {require('../assets/Pictures/water.jpg')}    name = 'I need Water' />
-                <Category img = {require('../assets/Pictures/food.jpg')}     name = 'I need Food' />
-                <Category img = {require('../assets/Pictures/bathroom.jpg')} name = 'I need the bathroom' />
+                <Category img = {require('../assets/Pictures/read.jpg')}     name = 'Quiero leer' />
+                <Category img = {require('../assets/Pictures/cook.jpg')}     name = 'Quiero cocinar algo' />
+                <Category img = {require('../assets/Pictures/play.jpg')}     name = 'Quiero jugar a algo' />
+                <Category img = {require('../assets/Pictures/write.jpg')}    name = 'Quiero escribir algo' />
+                <Category img = {require('../assets/Pictures/paint.jpg')}    name = 'Quiero pintar algo' />
+                <Category img = {require('../assets/Pictures/exercise.jpg')} name = 'Quiero ejercitarme' />
               </ScrollView>
             </View>
 

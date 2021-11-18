@@ -31,7 +31,7 @@ export const HomeScreen = () => {
           accessoryLeft = {renderDrawerAction}
         />
       <Divider/>
-      <Layout style = {{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: 'pink' }}>
+      <Layout style = {{ flex: 1, justifyContent: 'center', alignItems: 'center', backgroundColor: '#4632A1' }}>
         <Button onPress = {navigateDetails}>Go to my Voice</Button>
       </Layout>
     </SafeAreaView>

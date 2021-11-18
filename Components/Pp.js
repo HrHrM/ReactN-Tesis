@@ -1,5 +1,5 @@
-import React      from 'react'
-import { Button } from 'react-native'
+import React       from 'react'
+import { Button }  from 'react-native'
 import * as Speech from 'expo-speech'
 
 export default function Pp({ text = 'te' }) {

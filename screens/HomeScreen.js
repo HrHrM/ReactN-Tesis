@@ -4,7 +4,8 @@ import {
   Image,
   View,
   Text,
-  Dimensions 
+  Dimensions, 
+  ScrollView
   }                     from 'react-native'
 import { MenuIcon }     from "../assets/icons"
 import { SafeAreaView } from 'react-native-safe-area-context'
@@ -45,28 +46,34 @@ export const HomeScreen = () => {
           accessoryLeft = {renderDrawerAction}
         />
       <Divider/>
-       <Image source = {require('../assets/Home/3.png')} style = {style.Image} />
-       <View style = {style.indicatorContainer} >
-          <View style ={[style.indicator, style.indicatorActive]}/>
-          <View style ={style.indicator}/>
-          <View style ={style.indicator}/>
-       </View>
-       <View style = {{paddingHorizontal:20, paddingTop: 0}}>
-         <Text style = {style.title}>
-           Bienvenido a
-         </Text>
-         <Text style = {style.title}>
-           tu nueva voz, Velou
-         </Text>
-       </View>
-       <View style = {{marginTop: 5, paddingHorizontal:20}}>
-        <Text style = {style.textStyle}>Puedes usar mi voz para escribir tus pensamientos o usar mis opciones predeterminadas</Text>
-       </View>
-       <NativeBaseProvider>
-        <View style = {{flex: 1, justifyContent: 'center', paddingBottom: 0}}>
-          <Button style = {[style.voiceButton, style.shadowBtn, {shadowColor:'blue'},]} onPress = {navigateDetails}>Ve a mi Voz</Button>
+        {/* <ScrollView showsHorizontalScrollIndicator = {false} style ={{flex: 1}} > */}
+          <Image source = {require('../assets/Home/3.png')} style = {style.Image} />
+          {/* <Image style = {{}} source = {require('../assets/Home/3.png')} style = {style.Image2} /> */}
+          {/* <View style = {style.indicatorContainer} >
+           <View style ={[style.indicator, style.indicatorActive]}/>
+           <View style ={style.indicator}/>
+           <View style ={style.indicator}/>
+          </View> */}
+        {/* </ScrollView> */}
+       <View style = {{height: 160}}>
+        <View style = {{paddingHorizontal:20, paddingTop: 10, }}>
+          <Text style = {style.title}>
+            Bienvenido a
+          </Text>
+          <Text style = {style.title}>
+            tu nueva voz, Velou
+          </Text>
         </View>
-       </NativeBaseProvider>
+        <View style = {{marginTop: 5, paddingHorizontal:20}}>
+         <Text style = {style.textStyle}>Puedes usar mi voz para escribir tus  pensamientos o usar mis opciones predeterminadas</Text>
+        </View>
+        <NativeBaseProvider>
+         <View style = {{flex: 1, justifyContent: 'center', paddingBottom: 0}}>
+           <Button style = {[style.voiceButton, style.shadowBtn, {shadowColor:'blue'}  ,]} onPress = {navigateDetails}>Ve a mi Voz</Button>
+          </View>
+         </NativeBaseProvider>
+       </View>
+
        
     </SafeAreaView>
   )
@@ -74,6 +81,12 @@ export const HomeScreen = () => {
 
 const style = StyleSheet.create({
   Image: {
+    height: 360,
+    width: '100%',
+    borderBottomLeftRadius: 100,
+    marginBottom: 0,
+  },
+  Image2: {
     height: 360,
     width: '100%',
     borderBottomLeftRadius: 100,

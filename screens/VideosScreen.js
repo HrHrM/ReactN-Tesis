@@ -47,7 +47,7 @@ export const VideosScreen = () => {
             <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
                 ¿Te puedo ayudar con opciones basicas?
               </Text>
-            <View style = {{ height: 130, marginTop: 20 }}>
+            <View style = {{ height: 120, marginTop: 20 }}>
               <ScrollView horizontal = {true} 
                           showsHorizontalScrollIndicator = {false} >
                 <Category img = {require('../assets/Pictures/water.jpg')}    name = 'Necesito agua' />

@@ -68,7 +68,7 @@ export const HomeScreen = () => {
          <Text style = {style.textStyle}>Puedes usar mi voz para escribir tus  pensamientos o usar mis opciones predeterminadas</Text>
         </View>
         <NativeBaseProvider>
-         <View style = {{flex: 1, justifyContent: 'center', paddingBottom: 0}}>
+         <View style = {{flex: 1, justifyContent: 'center', paddingTop: 10}}>
            <Button style = {[style.voiceButton, style.shadowBtn, {shadowColor:'blue'}  ,]} onPress = {navigateDetails}>Ve a mi Voz</Button>
           </View>
          </NativeBaseProvider>

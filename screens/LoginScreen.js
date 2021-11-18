@@ -135,7 +135,7 @@ export const LoginScreen = ({ navigation }) => {
                     </View>
                   </View>
                   <View style = {styles.loginButton} >
-                    <Button onPress = {showAlert}  style = {[styles.Button, styles.shadowBtn, {shadowColor:'#00acee'},]} >
+                    <Button onPress = {showAlert}  style = {[styles.Button, styles.shadowBtn, {shadowColor:'blue'},]} >
                       <Text style = {{fontSize: 20, color: '#FFFFFF'}} >Login</Text>
                     </Button>
                   </View>

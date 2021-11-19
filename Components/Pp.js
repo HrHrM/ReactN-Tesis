@@ -11,13 +11,17 @@ import * as Speech from 'expo-speech'
 export default function Pp({ text }) {
     const speak = () => {
         Speech.speak(text)
-        Vibration.vibrate(10 * 60)
+        Vibration.vibrate(10 * 60)  
+    }
+    const stop = () => {
+        Speech.stop()
     }
     return(
         <NativeBaseProvider>
         <View style = {{}}>
             <Button 
                 onPress            = {speak}
+                onLongPress        = {stop}
                 title              = {text}
                 accessibilityLabel = "Audio Button"
                 style              = {style.button}

@@ -11,6 +11,7 @@ import {
     NativeBaseProvider,
     Text 
 }                          from 'native-base'
+import * as Speech         from 'expo-speech'
 
 
 export default function Tts() {
@@ -23,7 +24,7 @@ export default function Tts() {
         <NativeBaseProvider>
         <View>
             <View style = { {flex: 1, paddingBottom: 30} }>
-       
+                {Speech.speak('')}
             </View>
 
             <TextInput 

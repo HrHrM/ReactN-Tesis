@@ -29,6 +29,7 @@ export default function Tts() {
             <TextInput 
                 style        = {styles.input}
                 placeholder  = 'Escriba lo que quiere decir aquí'
+                keyboardType = 'visible-password'
                 onChangeText = {text => {
                     setValue(text)
                     console.log(value)
@@ -54,13 +55,7 @@ export default function Tts() {
             </Button>
             <Button 
                 onPress = {() => {
-                    // var x = {
-                    //     id: id,
-                    //     word: value
-                    // }
-                    // setId(id + 1)
-                    // setElements(elements => [ ...elements, x ])
-                    // console.log(elements)
+                    setElements([])
                 }}
                 title = 'Lere'
                 color = '#4632A1'
@@ -87,7 +82,6 @@ export default function Tts() {
 
 const styles = StyleSheet.create({
     scrollView: {
-        backgroundColor: '#FFFFFF',
         marginHorizontal: 0,
     },
     button:{

@@ -33,23 +33,22 @@ export const StoryDetailsScreen = ({ navigation }) => {
     
       <TopNavigation title = 'My Voice' alignment = 'center' accessoryLeft = {BackAction}/>
       <Divider/>
-      {/* <ImageBackground 
-        source = {require('../assets/Login/night.jpg')}
-        style  = {{ height: Dimensions.get('window').height / 2,}} > */}
-      <ScrollView>
-      
-        <View style = {style.general}>
-          <View style = {{flex: 1}}>
-            <Text style ={style.title}>
-              Velou, esta es mi voz
-            </Text>
-              <Tts/>
-          </View>
-        </View>
- 
-      
-      </ScrollView>
-      {/* </ImageBackground> */}
+      <ImageBackground
+        source = {require('../assets/Voice/voice.jpg')}
+        style  = {{height: Dimensions.get('window').height / 1.23}}>
+        <ScrollView
+          style = {{ flex: 1 }} 
+          showsVerticalScrollIndicator = {false}>
+          <Text style ={style.title}>
+            Usa mi voz
+          </Text>
+          <Tts/>
+
+        </ScrollView>
+        
+
+
+      </ImageBackground>
     </SafeAreaView>
   );
 };
@@ -79,4 +78,24 @@ const style = StyleSheet.create({
   
         </Card>
         
-      </View> */}
+      </View> 
+    
+
+    */}
+
+    {/* <ImageBackground 
+        source = {require('../assets/Login/night.jpg')}
+        style  = {{ height: Dimensions.get('window').height / 2,}} > */}
+      //   <ScrollView>
+      
+      //   <View style = {style.general}>
+      //     <View style = {{flex: 1}}>
+      //       <Text style ={style.title}>
+      //         Velou, esta es mi voz
+      //       </Text>
+      //         <Tts/>
+      //     </View>
+      //   </View>
+ 
+      
+      // </ScrollView>

@@ -15,7 +15,7 @@ export default function Pp({ text }) {
     }
     return(
         <NativeBaseProvider>
-        <View style = {{flex: 1, backgroundColor: 'white'}}>
+        <View style = {{}}>
             <Button 
                 onPress            = {speak}
                 title              = {text}

@@ -31,3 +31,4 @@ export default () => (
 //
 // total_horas_perdidas_aquí: 0
 // 50,68,6f,73,70,68,6f,70,68,79,6c,6c,69,74,65
+// ;)

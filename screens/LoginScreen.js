@@ -1,4 +1,4 @@
-import React                      from 'react'
+import React, {useState}          from 'react'
 import { ArrowIosBackIcon }       from '../assets/icons'
 import { SafeAreaView }           from 'react-native-safe-area-context'
 import { 
@@ -25,10 +25,32 @@ import {
   Checkbox,
   Center,
   Button }                        from 'native-base'
+import { auth }                   from '../firebase';
+import { 
+    onAuthStateChanged, 
+    signInWithEmailAndPassword
+    }                             from '@firebase/auth';
 
 
 
 export const LoginScreen = ({ navigation }) => {
+
+  const [email, setEmail]       = useState('')
+  const [password, setPassword] = useState('')
+
+  const LoginGranted = async () => {
+    try {
+      const user = await signInWithEmailAndPassword(
+        auth, 
+        email, 
+        password,
+      );
+      console.log(user)
+      Alert.alert('Usario creado', `${email} fue creado registrado correctamente`)
+    } catch (error) {
+      console.log(error.message)
+    }
+  }
   
   const navigateRegister = () => {
     navigation.navigate('Register')
@@ -107,6 +129,8 @@ export const LoginScreen = ({ navigation }) => {
                       keyboardType = 'email-address'
                       rightElement = 'alternate-email'
                       style        = {styles.inputEmail}
+                      value        = {email}
+                      onChangeText = {(text) => setEmail(text)}
                       
                     />
                     <Text style = {{color: '#BCBCBC', fontSize: 12, marginTop: 6}}>
@@ -116,8 +140,11 @@ export const LoginScreen = ({ navigation }) => {
                       label        = 'Password'
                       placeholder  = 'Contraseña'
                       status       = 'Control'
-                      keyboardType = 'visible-password'
+                      keyboardType = 'default'
                       style        = {styles.inputPass}
+                      value        = {password}
+                      onChangeText = {(text) => setPassword(text)}
+                      secureTextEntry = {true}
                     />
                   </View>
                   <View style = {styles.forgotPassView} >
@@ -135,7 +162,7 @@ export const LoginScreen = ({ navigation }) => {
                     </View>
                   </View>
                   <View style = {styles.loginButton} >
-                    <Button onPress = {showAlert}  style = {[styles.Button, styles.shadowBtn, {shadowColor:'blue'},]} >
+                    <Button onPress = {LoginGranted}  style = {[styles.Button, styles.shadowBtn, {shadowColor:'blue'},]} >
                       <Text style = {{fontSize: 20, color: '#FFFFFF'}} >Login</Text>
                     </Button>
                   </View>

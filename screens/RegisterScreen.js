@@ -1,4 +1,4 @@
-import React                from 'react'
+import React, {useState}    from 'react'
 import { ArrowIosBackIcon } from '../assets/icons'
 import { SafeAreaView }     from 'react-native-safe-area-context'
 import { 
@@ -26,8 +26,35 @@ import {
   Checkbox,
   Center,
   Button }                  from 'native-base'
+// import { auth }             from '../firebase'
+import { 
+  createUserWithEmailAndPassword 
+  }                         from 'firebase/auth'
+import { auth }             from '../firebase'
+import { useAsyncStorage }  from '@react-native-async-storage/async-storage';
 
 export const RegisterScreen = ({ navigation }) => {
+
+  const [email, setEmail]       = useState('')
+  const [password, setPassword] = useState('')
+  const [name, setName]         = useState('')
+  const [lastName, setLastName] = useState('')
+
+  const Registration = async () => {
+    try {
+      const user = await createUserWithEmailAndPassword(
+        auth, 
+        email, 
+        password,
+        name,
+        lastName
+      );
+      console.log(user)
+      Alert.alert('Usario creado', `${email} fue creado registrado correctamente`)
+    } catch (error) {
+      console.log(error.message)
+    }
+  };
 
   const navigateBack = () => {
     navigation.goBack()
@@ -101,6 +128,8 @@ export const RegisterScreen = ({ navigation }) => {
                       keyboardType = 'email-address'
                       rightElement = 'alternate-email'
                       style        = {styles.inputEmail}
+                      value        = {email}
+                      onChangeText = {(text) => setEmail(text)}
                       
                     />
                     <Text style = {{color: '#BCBCBC', fontSize: 12, marginTop: 6}}>
@@ -112,6 +141,8 @@ export const RegisterScreen = ({ navigation }) => {
                       status       = 'Control'
                       keyboardType = 'default'
                       style        = {styles.inputPass}
+                      value        = {name}
+                      onChangeText = {(text) => setName(text)}
                     />
                     <Text style = {{color: '#BCBCBC', fontSize: 12, marginTop: 6}}>
                     Porfavor coloque su apellido(s)
@@ -122,6 +153,8 @@ export const RegisterScreen = ({ navigation }) => {
                       status       = 'Control'
                       keyboardType = 'default'
                       style        = {styles.inputPass}
+                      value        = {lastName}
+                      onChangeText = {(text) => setLastName(text)}
                     />
                     <Text style = {{color: '#BCBCBC', fontSize: 12, marginTop: 6}}>
                     Porfavor coloque su contraseña
@@ -130,8 +163,10 @@ export const RegisterScreen = ({ navigation }) => {
                       label        = 'Password'
                       placeholder  = 'Contraseña'
                       status       = 'Control'
-                      keyboardType = 'visible-password'
+                      keyboardType = 'default'
                       style        = {styles.inputPass}
+                      value        = {password}
+                      onChangeText = {(text) => setPassword(text)}
                     />
                   </View>
                   <View style = {styles.forgotPassView} >
@@ -143,7 +178,7 @@ export const RegisterScreen = ({ navigation }) => {
                     <View style = {{flex:1, marginLeft: 0}}>
                       <TouchableHighlight underlayColor="#DDDDDD" onPress = {navigateAbout}>
                         <Text style = {{color: '#4632A1', alignSelf: 'flex-start', fontStyle: 'italic'}} >
-                         <Checkbox checked = {false} color = 'black' aria-label =   'Remember me'
+                         <Checkbox checked = {false} color = 'black' aria-label = 'Remember me'
                                    style = {{width: 17, height: 17}} />
                         {'  '}Acepto terminos de uso (tap para leerlos)
                         </Text>
@@ -151,7 +186,7 @@ export const RegisterScreen = ({ navigation }) => {
                     </View>
                   </View>
                   <View style = {styles.loginButton} >
-                    <Button onPress = {showAlert}  style = {[styles.Button, styles.shadowBtn, {shadowColor:'#00acee'},]} >
+                    <Button onPress = {Registration}  style = {[styles.Button, styles.shadowBtn, {shadowColor:'#00acee'},]} >
                       <Text style = {{fontSize: 20, color: '#FFFFFF'}} >Registrar</Text>
                     </Button>
                   </View>

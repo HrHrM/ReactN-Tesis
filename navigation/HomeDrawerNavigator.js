@@ -7,25 +7,51 @@ import {
   StyleService,
   Text,
   useStyleSheet,
-} from '@ui-kitten/components';
+}                                from '@ui-kitten/components';
 import {
   HomeIcon,
   InfoIcon,
   LoginIcon,
-} from '../assets/icons';
+}                                from '../assets/icons';
 
 import { AboutScreen }           from '../screens/AboutScreen';
 import { BottomTabsNavigator }   from './BottomTabsNavigator'
 import { LoginScreen }           from '../screens/LoginScreen';
-import React                     from 'react';
+import React, { useState }       from 'react';
 import { RegisterScreen }        from '../screens/RegisterScreen';
 import { SafeAreaView }          from 'react-native-safe-area-context';
-import { View }                  from "react-native";
+import { View, StyleSheet }      from "react-native";
 import { createDrawerNavigator } from '@react-navigation/drawer';
+import { style }                 from 'dom-helpers';
+import { auth }                  from '../firebase';
+import { 
+  onAuthStateChanged, 
+  signOut 
+  }                              from '@firebase/auth';
+import { useAsyncStorage }       from '@react-native-async-storage/async-storage';
+import { Button, NativeBaseProvider } from 'native-base';
 
 const { Navigator, Screen } = createDrawerNavigator();
  
 const DrawerContent = ({ navigation, state }) => {
+    
+    const [user, setUser] = useState({})
+
+    onAuthStateChanged( auth, (currentUser) => {
+      setUser(currentUser)
+    })
+
+    const Logout = async () => {
+      try {
+        await signOut(auth)
+        console.log('Disconnected')
+        Alert.alert('Desconectado correctamente')
+      } catch (error) {
+        console.log(error)
+      }
+
+    }
+
     const styles = useStyleSheet(themedStyles);  
     
     const Header = () => (   
@@ -52,6 +78,13 @@ const DrawerContent = ({ navigation, state }) => {
           <DrawerItem title = 'About' accessoryLeft = {InfoIcon}/>
           <DrawerItem title = 'Login' accessoryLeft = {LoginIcon}/>
         </Drawer>
+        <Text style = {stylesW.Welcome}>Bienvenido </Text>
+        <Text style = {stylesW.emailColor}>{user?.email}</Text>
+        <NativeBaseProvider>
+            <View style= {{flex: 1}}>
+              <Button style = {stylesW.signOut} onPress = {Logout}> Desconectarse</Button>
+            </View>
+        </NativeBaseProvider>
     </SafeAreaView>
   )
 };
@@ -85,3 +118,29 @@ export const HomeDrawerNavigator = () => (
     marginRight: 8,
   },
 }); 
+const stylesW = StyleSheet.create({
+  Welcome:{
+    paddingHorizontal: 30,
+    paddingTop: 10,
+    fontStyle: 'italic',
+    fontSize: 15,
+  },
+  emailColor: {
+    color: '#01A0D8',
+    paddingHorizontal: 30,
+    paddingTop: 10,
+    fontStyle: 'italic',
+    fontSize: 15,
+  },
+  signOut: {
+    borderRadius: 30,
+    width: 250,
+    backgroundColor: '#02CEFC',
+    bottom: -270,
+    alignSelf: 'center',
+    height: 35,
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+
+  },
+}) 

@@ -185,7 +185,7 @@ export const LoginScreen = ({ navigation }) => {
                     </Button>
                   </View>
                   <View>
-                    <TouchableHighlight>
+                    <TouchableHighlight underlayColor="#DDDDDD" >
                       <Text style = {{textAlign: 'center', padding: 5}}>¿No tiene una cuenta?
                         <Text style = {{color: '#4632A1', fontStyle: 'italic', textAlign: 'center'}} onPress = {navigateRegister} >
                           {' '} 
@@ -198,7 +198,7 @@ export const LoginScreen = ({ navigation }) => {
                     </Button> */}
                   </View>
                   <View>
-                    <Button style = {styles.signOut} onPress = {Logout}> Desconectarse</Button>
+                    <Button style = {styles.signOut} onPress = {Logout}>Desconectarse</Button>
                   </View>
                 </View>
             </View>

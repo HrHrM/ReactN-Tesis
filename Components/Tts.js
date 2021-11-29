@@ -25,6 +25,7 @@ export default function Tts() {
         <View>
             <View style = { {flex: 1, paddingBottom: 30} }>
                 {Speech.speak('')}
+                {console.log('Initialized')}
             </View>
 
             <TextInput 
@@ -47,12 +48,12 @@ export default function Tts() {
                     setElements(elements => [ ...elements, x ])
                     console.log(elements)
                 }}
-                title = 'Lere'
+                title = 'Leer'
                 color = '#4632A1'
                 accessibilityLabel = 'Input button'
                 style = {styles.button}
             >
-                Lere
+                Leer
             </Button>
             <Button 
                 onPress = {() => {

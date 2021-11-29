@@ -82,26 +82,25 @@ export const LoginScreen = ({ navigation }) => {
     <TopNavigationAction icon = {ArrowIosBackIcon} onPress = {navigateBack}/>
   );
 
-  const showAlert = () =>
-  Alert.alert(
-    "Aviso programado",
-    "No se detecta conexión a internet, verifique su conexión e intente denuevo",
-    [
-      {
-        text: "Firebase",
-        onPress: () => Alert.alert("Firebase", 'No se detecta conexión a los servidores de Firebase, verifique su conexión e intente denuevo'),
-        style: "cancel",
-      },
-    ],
-    {
-      cancelable: true,
-      onDismiss: () =>
-        Alert.alert(
-          'Alerta cancelada', "Verificación cancelada"
-        ),
-    }
-  );
-
+  // const showAlert = () =>
+  // Alert.alert(
+  //   "Aviso programado",
+  //   "No se detecta conexión a internet, verifique su conexión e intente denuevo",
+  //   [
+  //     {
+  //       text: "Firebase",
+  //       onPress: () => Alert.alert("Firebase", 'No se detecta conexión a los servidores de Firebase, verifique su conexión e intente denuevo'),
+  //       style: "cancel",
+  //     },
+  //   ],
+  //   {
+  //     cancelable: true,
+  //     onDismiss: () =>
+  //       Alert.alert(
+  //         'Alerta cancelada', "Verificación cancelada"
+  //       ),
+  //   }
+  // );
 
     return (
       <SafeAreaView style = {{ flex: 1 }} >

@@ -7,13 +7,13 @@ import {
   StyleService,
   Text,
   useStyleSheet,
+  Divider,
 }                                from '@ui-kitten/components';
 import {
   HomeIcon,
   InfoIcon,
   LoginIcon,
 }                                from '../assets/icons';
-
 import { AboutScreen }           from '../screens/AboutScreen';
 import { BottomTabsNavigator }   from './BottomTabsNavigator'
 import { LoginScreen }           from '../screens/LoginScreen';
@@ -23,6 +23,7 @@ import { SafeAreaView }          from 'react-native-safe-area-context';
 import { 
   View, 
   StyleSheet,
+  Image
   }                              from "react-native";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { style }                 from 'dom-helpers';
@@ -81,8 +82,15 @@ const DrawerContent = ({ navigation, state }) => {
           <DrawerItem title = 'About' accessoryLeft = {InfoIcon}/>
           <DrawerItem title = 'Login' accessoryLeft = {LoginIcon}/>
         </Drawer>
+        <Divider/>
         <Text style = {stylesW.Welcome}>Bienvenido </Text> 
         <Text style = {stylesW.emailColor}>{user?.email}</Text>
+          <View>
+            <Image
+             source = {require('../assets/Home/sign.png')}
+             style  = {{ height: 200, width: 200, alignSelf: 'center', bottom: -60, resizeMode: "contain"}}
+             />
+          </View>
         {/* <NativeBaseProvider>
           
             <View style= {{flex: 1}} onPress = {Logout} >
@@ -139,15 +147,9 @@ const stylesW = StyleSheet.create({
     fontStyle: 'italic',
     fontSize: 15,
   },
-  signOut: {
-    borderRadius: 30,
-    width: 250,
-    backgroundColor: '#02CEFC',
-    bottom: -270,
-    alignSelf: 'center',
-    height: 35,
-    fontWeight: 'bold',
-    fontStyle: 'italic',
-
+  brandView:{
+    flex:           1,
+    justifyContent: 'center',
+    alignItems:     'center'
   },
 }) 

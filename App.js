@@ -6,6 +6,7 @@ import {
 import { AppNavigator }     from './navigation/AppNavigator';
 import { EvaIconsPack }     from '@ui-kitten/eva-icons';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import { useAsyncStorage }  from '@react-native-async-storage/async-storage';
 
 export default () => (
   <>

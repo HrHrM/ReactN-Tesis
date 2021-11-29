@@ -97,9 +97,23 @@ export const VideosScreen = () => {
             <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
               ¿Te puedo ayudar con algo relacionado al entretenimiento?
             </Text>
-            <View style = {{ height: 200, marginTop: 20, paddingBottom: 1 }}>
+            <View style = {{ height: 130, marginTop: 20 }}>
               <ScrollView horizontal = {true} 
                           showsHorizontalScrollIndicator = {false} >
+                <Category img = {require('../assets/Pictures/read.jpg')}     name = 'Quiero leer' />
+                <Category img = {require('../assets/Pictures/cook.jpg')}     name = 'Quiero cocinar algo' />
+                <Category img = {require('../assets/Pictures/play.jpg')}     name = 'Quiero jugar a algo' />
+                <Category img = {require('../assets/Pictures/write.jpg')}    name = 'Quiero escribir algo' />
+                <Category img = {require('../assets/Pictures/paint.jpg')}    name = 'Quiero pintar algo' />
+                <Category img = {require('../assets/Pictures/exercise.jpg')} name = 'Quiero ejercitarme' />
+              </ScrollView>
+            </View>
+            <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
+              ¿?
+            </Text>
+            <View style = {{ height: 200, marginTop: 20, paddingBottom: 1 }}>
+              <ScrollView horizontal = {true} 
+                          showsVerticalScrollIndicator = {false} >
                 <Category img = {require('../assets/Pictures/read.jpg')}     name = 'Quiero leer' />
                 <Category img = {require('../assets/Pictures/cook.jpg')}     name = 'Quiero cocinar algo' />
                 <Category img = {require('../assets/Pictures/play.jpg')}     name = 'Quiero jugar a algo' />

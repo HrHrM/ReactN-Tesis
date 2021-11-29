@@ -43,19 +43,21 @@ export const AboutScreen = ({ navigation }) => {
             <Text style = {{fontSize: 24, fontWeight: '700', paddingHorizontal: 20, textAlign: 'center'}} >
               Detalles del desarrollador
             </Text>
-            <View style = {{height: 300, marginTop: 20}} >
-              <Image 
-                style  = {{flex: 1, height: 100, width: 200, resizeMode: 'cover', borderRadius: 40, borderWidth: 1, borderColor: '#dddd', alignSelf: 'center'}}
-                source = {require ('../assets/About/profile.png')} 
-              />
-            </View>
+            <TouchableHighlight underlayColor="#DDDDDD" onPress = {handlePress} >
+              <View style = {{height: 300, marginTop: 20, paddingBottom: 15}}>
+                <Image 
+                  style  = {{flex: 1, height: 100, width: 200, resizeMode: 'cover', borderRadius: 40, borderWidth: 1, borderColor: '#dddd', alignSelf: 'center'}}
+                  source = {require ('../assets/About/profile.png')} 
+                />              
+              </View>
+            </TouchableHighlight>
             <View style = {{paddingBottom: 10}} >
               <TouchableHighlight underlayColor = '#DDDDDD' onPress = {handlePress}>
-                <Text style = {{fontSize: 15, fontWeight: '500', paddingTop: 15}}>
-                  Github: <Text style = {{color: '#4632A1'}}>  {'                           '}https://github.com/HrHrM</Text>
+                <Text style = {{fontSize: 15, fontWeight: '500'}}>
+                  Github: <Text style = {{color: '#4632A1'}}>  {'                        '}https://github.com/HrHrM</Text>
                 </Text>
               </TouchableHighlight>
-              <Text>Desarrollador principal: Johnny Bohorquez</Text>
+              <Text>Desarrollador principal:{'          '} Johnny Bohorquez</Text>
               <Text>Instituto: {'     '} Universidad Alejandro de Humboldt</Text>
               {/* <Text>Desarrollador auxiliar:   Gabriel Galati</Text> */}
             </View>
@@ -99,8 +101,8 @@ export const AboutScreen = ({ navigation }) => {
                 máximo que permite la ley, en ningún caso seremos responsables por cualquier pérdida o daño
                 relacionados.
               </Text>
-              <Text style = {{fontSize: 24, fontWeight: '700', paddingHorizontal: 20, textAlign: 'right', paddingBottom: 100}} >
-                -Att. El desarrollador
+              <Text style = {{fontSize: 15, fontWeight: '700', paddingHorizontal: 20, textAlign: 'right', paddingBottom: 50}} >
+                -Johnny Bohorquez, creado el 29/11/21 - 
               </Text>
             </View>
           </View>

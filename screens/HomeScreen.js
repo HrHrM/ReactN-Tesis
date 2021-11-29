@@ -1,4 +1,4 @@
-import React            from 'react'
+import React, { Alert }            from 'react'
 import { 
   StyleSheet,
   Image,
@@ -24,9 +24,28 @@ import {
     MaterialIcons,
     AntDesign 
   }                     from "@expo/vector-icons"
-import { Button, NativeBaseProvider }       from 'native-base'
+import { 
+  Button, 
+  NativeBaseProvider }  from 'native-base'
+// import { auth }         from '../firebase';
+// import { 
+//   onAuthStateChanged, 
+//   signOut 
+//   }                     from '@firebase/auth';
 
 export const HomeScreen = () => {
+
+  // const Logout = async () => {
+  //   try {
+  //     await signOut(auth)
+  //     console.log('Disconnected')
+  //     Alert.alert('Desconectado correctamente')
+  //   } catch (error) {
+  //     console.log(error)
+  //   }
+
+  // }
+
   const navigation = useNavigation()
   const navigateDetails = () => {
     navigation.navigate('Details')
@@ -40,12 +59,14 @@ export const HomeScreen = () => {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
+
         <TopNavigation
           title         = "Inicio"
           alignment     = "center"
           accessoryLeft = {renderDrawerAction}
         />
       <Divider/>
+      <ScrollView style={{ flex: 1 }} >
         {/* <ScrollView showsHorizontalScrollIndicator = {false} style ={{flex: 1}} > */}
           <Image source = {require('../assets/Home/3.png')} style = {style.Image} />
           {/* <Image style = {{}} source = {require('../assets/Home/3.png')} style = {style.Image2} /> */}
@@ -69,12 +90,16 @@ export const HomeScreen = () => {
         </View>
         <NativeBaseProvider>
          <View style = {{flex: 1, justifyContent: 'center', paddingTop: 10}}>
-           <Button style = {[style.voiceButton, style.shadowBtn, {shadowColor:'blue'}  ,]} onPress = {navigateDetails}>Ve a mi Voz</Button>
+          <Button style = {[style.voiceButton, style.shadowBtn, {shadowColor:'blue'}  ,]} onPress = {navigateDetails}>
+           Ve a mi Voz
+          </Button>
+
+          {/* <Button style = {style.signOut} onPress = {Logout}> Desconectarse</Button> */}
           </View>
          </NativeBaseProvider>
        </View>
 
-       
+       </ScrollView>
     </SafeAreaView>
   )
 }

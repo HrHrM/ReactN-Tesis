@@ -17,18 +17,22 @@ import {
   Dimensions,
   View, 
   StyleSheet,
-  Alert }                        from 'react-native'
+  Alert,  
+  TouchableHighlight
+ }                                from 'react-native'
 import { 
   Icon, 
   NativeBaseProvider,
   Input, 
   Checkbox,
   Center,
-  Button }                        from 'native-base'
+  Button,
+ }                                from 'native-base'
 import { auth }                   from '../firebase';
 import { 
     onAuthStateChanged, 
-    signInWithEmailAndPassword
+    signInWithEmailAndPassword,
+    signOut
     }                             from '@firebase/auth';
 
 
@@ -46,12 +50,26 @@ export const LoginScreen = ({ navigation }) => {
         password,
       );
       console.log(user)
-      Alert.alert('Usario creado', `${email} fue creado registrado correctamente`)
+      Alert.alert('Verificación realizada', `El e-mail ${email} se ha logeado correctamente`)
+      navigateBack()
     } catch (error) {
       console.log(error.message)
+      Alert.alert('Error de verificación', 'Verifique su conexión')
     }
   }
+
   
+  const Logout = async () => {
+    try {
+      await signOut(auth)
+      console.log('Disconnected')
+      Alert.alert('Desconectado correctamente', 'Ahora esta usando el modo invitado')
+    } catch (error) {
+      console.log(error)
+    }
+
+  }
+
   const navigateRegister = () => {
     navigation.navigate('Register')
   };
@@ -147,12 +165,12 @@ export const LoginScreen = ({ navigation }) => {
                       secureTextEntry = {true}
                     />
                   </View>
-                  <View style = {styles.forgotPassView} >
-                    {/* <View style = {{flex:1, marginLeft: 0}}>
+                  {/* <View style = {styles.forgotPassView} >
+                    <View style = {{flex:1, marginLeft: 0}}>
                       <Text style = {{color: '#8f9195', alignSelf: 'flex-end'}} >
                         ¿Olvido su contraseña?
                       </Text>
-                    </View> */}
+                    </View>
                     <View style = {{flex:1, marginLeft: 0}}>
                       <Text style = {{color: '#8f9195', alignSelf: 'flex-start'}} >
                        <Checkbox checked = {false} color = 'black' aria-label = 'Remember me'
@@ -160,22 +178,27 @@ export const LoginScreen = ({ navigation }) => {
                        {'  '}Recuerdame
                       </Text>
                     </View>
-                  </View>
+                  </View> */}
                   <View style = {styles.loginButton} >
                     <Button onPress = {LoginGranted}  style = {[styles.Button, styles.shadowBtn, {shadowColor:'blue'},]} >
                       <Text style = {{fontSize: 20, color: '#FFFFFF'}} >Login</Text>
                     </Button>
                   </View>
-                  <View style = {styles.loginButton}>
-                  <Text style = {{textAlign: 'center', padding: 20}}>¿No tiene una cuenta?
-                    <Text style = {{color: '#4632A1', fontStyle: 'italic', textAlign: 'center'}} >
-                     {' '} 
-                     Registrese ahora 
-                     </Text>
-                  </Text>
-                    <Button style = {[styles.regButton, styles.shadowBtn, {shadowColor:'purple'},]} onPress = {navigateRegister}>
+                  <View>
+                    <TouchableHighlight>
+                      <Text style = {{textAlign: 'center', padding: 5}}>¿No tiene una cuenta?
+                        <Text style = {{color: '#4632A1', fontStyle: 'italic', textAlign: 'center'}} onPress = {navigateRegister} >
+                          {' '} 
+                          Registrese ahora 
+                        </Text>
+                      </Text>
+                    </TouchableHighlight>
+                    {/* <Button style = {[styles.regButton, styles.shadowBtn, {shadowColor:'purple'},]} onPress = {navigateRegister}>
                       <Text style = {{fontSize: 20, color: '#FFFFFF'}}>Registrarse</Text>
-                    </Button>
+                    </Button> */}
+                  </View>
+                  <View>
+                    <Button style = {styles.signOut} onPress = {Logout}> Desconectarse</Button>
                   </View>
                 </View>
             </View>
@@ -226,7 +249,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
   },
   loginButton: {
-    height: 70, 
+    height: 80, 
     justifyContent: 'center', 
     alignItems: 'center'},
   Button: {
@@ -248,7 +271,18 @@ const styles = StyleSheet.create({
     shadowOpacity: 10,
     shadowRadius: 3,
     elevation: 15,
-  }
+  },
+  signOut:{
+    paddingTop: 10,
+    borderRadius: 30,
+    width: 300,
+    backgroundColor: '#FFD141',
+    bottom: -30,
+    alignSelf: 'center',
+    height: 40,
+    fontWeight: 'bold',
+    fontStyle: 'italic',
+  },
 })
   // return (
   //   <SafeAreaView style = {{ flex: 1 }}>

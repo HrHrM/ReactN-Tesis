@@ -20,7 +20,10 @@ import { LoginScreen }           from '../screens/LoginScreen';
 import React, { useState }       from 'react';
 import { RegisterScreen }        from '../screens/RegisterScreen';
 import { SafeAreaView }          from 'react-native-safe-area-context';
-import { View, StyleSheet }      from "react-native";
+import { 
+  View, 
+  StyleSheet,
+  }                              from "react-native";
 import { createDrawerNavigator } from '@react-navigation/drawer';
 import { style }                 from 'dom-helpers';
 import { auth }                  from '../firebase';
@@ -29,7 +32,7 @@ import {
   signOut 
   }                              from '@firebase/auth';
 import { useAsyncStorage }       from '@react-native-async-storage/async-storage';
-import { Button, NativeBaseProvider } from 'native-base';
+// import { Button, NativeBaseProvider } from 'native-base';
 
 const { Navigator, Screen } = createDrawerNavigator();
  
@@ -41,16 +44,16 @@ const DrawerContent = ({ navigation, state }) => {
       setUser(currentUser)
     })
 
-    const Logout = async () => {
-      try {
-        await signOut(auth)
-        console.log('Disconnected')
-        Alert.alert('Desconectado correctamente')
-      } catch (error) {
-        console.log(error)
-      }
+    // const Logout = async () => {
+    //   try {
+    //     await signOut(auth)
+    //     console.log('Disconnected')
+    //     Alert.alert('Desconectado correctamente')
+    //   } catch (error) {
+    //     console.log(error)
+    //   }
 
-    }
+    // }
 
     const styles = useStyleSheet(themedStyles);  
     
@@ -78,13 +81,17 @@ const DrawerContent = ({ navigation, state }) => {
           <DrawerItem title = 'About' accessoryLeft = {InfoIcon}/>
           <DrawerItem title = 'Login' accessoryLeft = {LoginIcon}/>
         </Drawer>
-        <Text style = {stylesW.Welcome}>Bienvenido </Text>
+        <Text style = {stylesW.Welcome}>Bienvenido </Text> 
         <Text style = {stylesW.emailColor}>{user?.email}</Text>
-        <NativeBaseProvider>
-            <View style= {{flex: 1}}>
+        {/* <NativeBaseProvider>
+          
+            <View style= {{flex: 1}} onPress = {Logout} >
+            <TouchableHighlight>
               <Button style = {stylesW.signOut} onPress = {Logout}> Desconectarse</Button>
+            </TouchableHighlight>
             </View>
-        </NativeBaseProvider>
+          
+        </NativeBaseProvider> */}
     </SafeAreaView>
   )
 };

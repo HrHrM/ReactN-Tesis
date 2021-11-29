@@ -87,7 +87,7 @@ export const VideosScreen = () => {
                 <Category img = {require('../assets/Pictures/before.png')}    name = 'Antes' />
                 <Category img = {require('../assets/Pictures/after.png')}     name = 'Despues' />
                 <Category img = {require('../assets/Pictures/InNight.png')}   name = 'En la noche' />
-                <Category img = {require('../assets/Pictures/food.jpg')}      name = 'Mañana' />
+                <Category img = {require('../assets/Pictures/tomorrow.png')}  name = 'Mañana' />
                 <Category img = {require('../assets/Pictures/today.png')}     name = 'Hoy' />
                 <Category img = {require('../assets/Pictures/yesterday.png')} name = 'Ayer' />
                 <Category img = {require('../assets/Pictures/inMorning.png')} name = 'En la mañana' />

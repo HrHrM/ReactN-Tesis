@@ -51,6 +51,7 @@ export const RegisterScreen = ({ navigation }) => {
       );
       console.log(user)
       Alert.alert('Usario creado', `${email} fue creado registrado correctamente`)
+      navigateHome()
     } catch (error) {
       console.log(error.message)
     }
@@ -62,6 +63,9 @@ export const RegisterScreen = ({ navigation }) => {
   const navigateAbout = () => {
     navigation.navigate('About')
   };
+  const navigateHome = () => {
+    navigation.navigate('Home')
+  }
 
   const BackAction = () => (
     <TopNavigationAction icon = {ArrowIosBackIcon} onPress = {navigateBack}/>
@@ -177,17 +181,17 @@ export const RegisterScreen = ({ navigation }) => {
                     </View> */}
                     <View style = {{flex:1, marginLeft: 0}}>
                       <TouchableHighlight underlayColor="#DDDDDD" onPress = {navigateAbout}>
-                        <Text style = {{color: '#4632A1', alignSelf: 'flex-start', fontStyle: 'italic'}} >
-                         <Checkbox checked = {false} color = 'black' aria-label = 'Remember me'
-                                   style = {{width: 17, height: 17}} />
-                        {'  '}Acepto terminos de uso (tap para leerlos)
+                        <Text style = {{color: '#4632A1', alignSelf: 'center', fontStyle: 'italic', textAlign: 'center'}} >
+                         {/* <Checkbox checked = {false} color = 'black' aria-label = 'Remember me'
+                                   style = {{width: 17, height: 17}} /> */}
+                          Al Registrarse esta aceptando mis terminos de uso (tap para leerlos)
                         </Text>
                       </TouchableHighlight>
                     </View>
                   </View>
                   <View style = {styles.loginButton} >
                     <Button onPress = {Registration}  style = {[styles.Button, styles.shadowBtn, {shadowColor:'#00acee'},]} >
-                      <Text style = {{fontSize: 20, color: '#FFFFFF'}} >Registrar</Text>
+                      <Text style = {{fontSize: 20, color: '#FFFFFF'}} >Registrarse</Text>
                     </Button>
                   </View>
                 </View>
@@ -214,7 +218,7 @@ const styles = StyleSheet.create({
   bottomView:{
     flex: 1.5,
     backgroundColor: '#FFFFFF',
-    bottom: 30,
+    bottom:40,
     borderTopStartRadius: 50,
     borderTopEndRadius: 50,
   },

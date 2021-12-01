@@ -27,6 +27,7 @@ import {
 import { 
   Button, 
   NativeBaseProvider }  from 'native-base'
+import * as Speech      from 'expo-speech'
 // import { auth }         from '../firebase';
 // import { 
 //   onAuthStateChanged, 

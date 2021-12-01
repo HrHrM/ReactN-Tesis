@@ -21,7 +21,7 @@ export default function Category ({ img, name }) {
 
     return (
         <TouchableHighlight underlayColor="#DDDDDD" onPress = {imgpSpeak} onLongPress = {stop} >
-            <View style = {{ height: 130, width: 130, marginLeft: 20, borderWidth: 0.5, borderColor: '#dddd', borderRadius: 20 }}>
+            <View style = {{ height: 130, width: 130, marginLeft: 20, marginRight: 0, borderWidth: 0.5, borderColor: '#dddd', borderRadius: 20, paddingRight: 0 }}>
                 <View style = {{ flex: 2 }}>
                     <Image 
                     source = {img}

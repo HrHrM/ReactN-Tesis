@@ -16,6 +16,7 @@ import {
   ImageBackground,
   Dimensions
  }                          from 'react-native';
+import * as Speech          from 'expo-speech'
 
  
 export const StoryDetailsScreen = ({ navigation }) => {
@@ -30,6 +31,10 @@ export const StoryDetailsScreen = ({ navigation }) => {
 
   return (
     <SafeAreaView style = {{ flex: 1, backgroundColor: 'white' }}>
+      <View>
+        {Speech.speak('')}
+        {console.log('Initialized')}
+      </View>
     
       <TopNavigation title = 'My Voice' alignment = 'center' accessoryLeft = {BackAction}/>
       <Divider/>
@@ -38,7 +43,7 @@ export const StoryDetailsScreen = ({ navigation }) => {
         style  = {{height: Dimensions.get('window').height / 1.23}}>
         <ScrollView
           style = {{ flex: 1 }} 
-          showsVerticalScrollIndicator = {false}>
+          showsVerticalScrollIndicator = {true}>
           <Text style ={style.title}>
             Usa mi voz
           </Text>

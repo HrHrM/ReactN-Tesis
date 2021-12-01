@@ -11,7 +11,7 @@ import {
     NativeBaseProvider,
     Text 
 }                          from 'native-base'
-import * as Speech         from 'expo-speech'
+// import * as Speech         from 'expo-speech'
 
 
 export default function Tts() {
@@ -24,8 +24,8 @@ export default function Tts() {
         <NativeBaseProvider>
         <View>
             <View style = { {flex: 1, paddingBottom: 30} }>
-                {Speech.speak('')}
-                {console.log('Initialized')}
+                {/* {Speech.speak('')}
+                {console.log('Initialized')} */}
             </View>
 
             <TextInput 
@@ -52,6 +52,7 @@ export default function Tts() {
                 color = '#4632A1'
                 accessibilityLabel = 'Input button'
                 style = {styles.button}
+                
             >
                 Leer
             </Button>

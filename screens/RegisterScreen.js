@@ -31,7 +31,7 @@ import {
   createUserWithEmailAndPassword 
   }                         from 'firebase/auth'
 import { auth }             from '../firebase'
-import { useAsyncStorage }  from '@react-native-async-storage/async-storage';
+import useAsyncStorage      from '@react-native-async-storage/async-storage';
 
 export const RegisterScreen = ({ navigation }) => {
 

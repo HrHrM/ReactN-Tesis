@@ -79,7 +79,7 @@ export const VideosScreen = () => {
                 <Category img = {require('../assets/Pictures/please.png')}   name = 'Por favor' />
                 <Category img = {require('../assets/Pictures/how.png')}      name = '¿Cómo estás?' />
                 <Category img = {require('../assets/Pictures/pleasure.jpg')} name = 'Mucho gusto' />
-                <Category img = {require('../assets/Pictures/bye.jpg')}      name = 'Adios' />
+                <Category img = {require('../assets/Pictures/bye.jpg')}      name = 'Adiós' />
                 <Category img = {require('../assets/Pictures/later.png')}    name = 'Hasta luego' />
                 <Category img = {require('../assets/Pictures/tomorrow.png')} name = 'Nos vemos Mañana' />
                 <Category img = {require('../assets/Pictures/night.png')}    name = 'Buenas noches' />
@@ -100,6 +100,7 @@ export const VideosScreen = () => {
                 <Category img = {require('../assets/Pictures/yesterday.png')} name = 'Ayer' />
                 <Category img = {require('../assets/Pictures/inMorning.png')} name = 'En la mañana' />
                 <Category img = {require('../assets/Pictures/early.jpg')}     name = 'Es muy temprano' />
+                <Category img = {require('../assets/Pictures/afternoon.jpg')}     name = 'Es muy tarde' />
               </ScrollView>
             </View>
             <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
@@ -110,7 +111,7 @@ export const VideosScreen = () => {
                           showsHorizontalScrollIndicator = {false} >
                 <Category img = {require('../assets/Pictures/am.jpg')}    name = 'A.M.' />
                 <Category img = {require('../assets/Pictures/pm.jpg')}    name = 'P.M.' />
-                <Category img = {require('../assets/Pictures/1.jpg')}     name = 'Es la 1' />
+                <Category img = {require('../assets/Pictures/1.jpg')}     name = 'Son la 1' />
                 <Category img = {require('../assets/Pictures/2.jpg')}     name = 'Son las 2' />
                 <Category img = {require('../assets/Pictures/3.jpg')}     name = 'Son las 3' />
                 <Category img = {require('../assets/Pictures/4.jpg')}     name = 'Son las 4' />
@@ -121,9 +122,10 @@ export const VideosScreen = () => {
                 <Category img = {require('../assets/Pictures/9.jpg')}     name = 'Son las 9' />
                 <Category img = {require('../assets/Pictures/10.jpg')}    name = 'Son las 10' />
                 <Category img = {require('../assets/Pictures/11.jpg')}    name = 'Son las 11' />
-                <Category img = {require('../assets/Pictures/12.jpg')}    name = 'Son las 12' />
+                <Category img = {require('../assets/Pictures/12.jpg')}    name = 'Son las 12 del mediodía' />
+                <Category img = {require('../assets/Pictures/12.jpg')}    name = 'Son las 12 de la medianoche' />
                 <Category img = {require('../assets/Pictures/am.jpg')}    name = 'A.M.' />
-                <Category img = {require('../assets/Pictures/pm.jpg')}    name = 'P.M' />
+                <Category img = {require('../assets/Pictures/pm.jpg')}    name = 'P.M.' />
               </ScrollView>
             </View>
             <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
@@ -166,7 +168,7 @@ export const VideosScreen = () => {
                 <Category img = {require('../assets/Pictures/head.jpg')}    name = 'Tengo dolor de cabeza' />
                 <Category img = {require('../assets/Pictures/arm.jpg')}     name = 'Me duele el brazo' />
                 <Category img = {require('../assets/Pictures/leg.jpg')}     name = 'Me duele la pierna' />
-                <Category img = {require('../assets/Pictures/stomach.jpg')} name = 'Me duele el estomago' />
+                <Category img = {require('../assets/Pictures/stomach.jpg')} name = 'Me duele el estómago' />
                 <Category img = {require('../assets/Pictures/neck.jpg')}    name = 'Me duele el cuello' />
                 <Category img = {require('../assets/Pictures/foot.jpg')}    name = 'Me duele el pie' />
                 <Category img = {require('../assets/Pictures/back.jpg')}    name = 'Me duele la espalda' />

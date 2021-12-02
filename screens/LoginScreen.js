@@ -34,10 +34,9 @@ import {
     signInWithEmailAndPassword,
     signOut
     }                             from '@firebase/auth';
-import AsyncStorage               from '@react-native-community/async-storage'
 
 
-
+    
 export const LoginScreen = ({ navigation }) => {
 
   const [email, setEmail]       = useState('')

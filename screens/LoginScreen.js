@@ -54,7 +54,7 @@ export const LoginScreen = ({ navigation }) => {
       navigateBack()
     } catch (error) {
       console.log(error.message)
-      Alert.alert('Error de verificación', 'Verifique su conexión')
+      Alert.alert('Error de verificación', 'Sus datos fueron erroneos o presenta una falla de conexión, verifique e intente nuevamente')
     }
   }
 
@@ -63,8 +63,9 @@ export const LoginScreen = ({ navigation }) => {
     try {
       await signOut(auth)
       console.log('Disconnected')
-      Alert.alert('Desconectado correctamente', 'Ahora esta usando el modo invitado')
+      Alert.alert('Modo invitado activado', 'No esta logeado en ninguna cuenta en este momento')
     } catch (error) {
+      Alert.alert('No hay ningun usuario logeado', 'Aún sigues en el modo invitado')
       console.log(error)
     }
 

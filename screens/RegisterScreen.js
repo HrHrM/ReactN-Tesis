@@ -52,6 +52,7 @@ export const RegisterScreen = ({ navigation }) => {
       Alert.alert('Usario creado', `${email} fue creado registrado correctamente`)
       navigateHome()
     } catch (error) {
+      Alert.alert('Error al registrarse', `Hubo un error llenando los campos requeridos o un fallo en la conexión`)
       console.log(error.message)
     }
   };

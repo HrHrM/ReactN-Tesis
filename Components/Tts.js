@@ -31,7 +31,7 @@ export default function Tts() {
             <TextInput 
                 style        = {styles.input}
                 placeholder  = 'Escriba lo que quiere decir aquí'
-                keyboardType = 'visible-password'
+                keyboardType = 'email-address'
                 onChangeText = {text => {
                     setValue(text)
                     console.log(value)
@@ -47,6 +47,7 @@ export default function Tts() {
                     setId(id + 1)
                     setElements(elements => [ ...elements, x ])
                     console.log(elements)
+                    setValue('')
                 }}
                 title = 'Leer'
                 color = '#4632A1'

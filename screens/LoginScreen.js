@@ -52,6 +52,8 @@ export const LoginScreen = ({ navigation }) => {
       console.log(user)
       Alert.alert('Verificación realizada', `El e-mail ${email} se ha logeado correctamente`)
       navigateBack()
+      setEmail('')
+      setPassword('')
     } catch (error) {
       console.log(error.message)
       Alert.alert('Error de verificación', 'Sus datos fueron erroneos o presenta una falla de conexión, verifique e intente nuevamente')
@@ -64,6 +66,8 @@ export const LoginScreen = ({ navigation }) => {
       await signOut(auth)
       console.log('Disconnected')
       Alert.alert('Modo invitado activado', 'No esta logeado en ninguna cuenta en este momento')
+      setEmail('')
+      setPassword('')
     } catch (error) {
       Alert.alert('No hay ningun usuario logeado', 'Aún sigues en el modo invitado')
       console.log(error)

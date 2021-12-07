@@ -86,6 +86,29 @@ export const VideosScreen = () => {
               </ScrollView>
             </View>
             <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
+              ¿Te puedo ayudar con algo relacionado a tu familia?
+            </Text>
+            <View style = {{ height: 130, marginTop: 20 }}>
+              <ScrollView horizontal = {true} 
+                          showsHorizontalScrollIndicator = {false} >
+                <Category img = {require('../assets/Pictures/dad.jpg')}    name = 'Papá' />
+                <Category img = {require('../assets/Pictures/mom.jpg')}    name = 'Mamá' />
+                <Category img = {require('../assets/Pictures/uncle.jpg')}  name = 'Tio' />
+                <Category img = {require('../assets/Pictures/uncle.jpg')}  name = 'Tia' />
+                <Category img = {require('../assets/Pictures/grand.jpg')}  name = 'Abuelo' />
+                <Category img = {require('../assets/Pictures/grand.jpg')}  name = 'Abuela' />
+                <Category img = {require('../assets/Pictures/cousin.jpg')} name = 'Primo' />
+                <Category img = {require('../assets/Pictures/cousin.jpg')} name = 'Prima' />
+                <Category img = {require('../assets/Pictures/co.jpg')}     name = 'Esposo' />
+                <Category img = {require('../assets/Pictures/co.jpg')}     name = 'Esposa' />
+                <Category img = {require('../assets/Pictures/son.jpg')}    name = 'Hijo' />
+                <Category img = {require('../assets/Pictures/son.jpg')}    name = 'Hija' />
+                <Category img = {require('../assets/Pictures/bro.jpg')}    name = 'Hermano' />
+                <Category img = {require('../assets/Pictures/bro.jpg')}    name = 'Hermana' />
+                <Category img = {require('../assets/Pictures/family.jpg')} name = 'Familia' />
+              </ScrollView>
+            </View>
+            <Text style ={{fontSize:15, fontWeight:'700', paddingHorizontal: 20, paddingTop: 10}}>
               ¿Te puedo ayudar con algo relacionado al tiempo?
             </Text>
             <View style = {{ height: 130, marginTop: 20 }}>

@@ -102,7 +102,7 @@ export const AboutScreen = ({ navigation }) => {
                 relacionados.
               </Text>
               <Text style = {{fontSize: 15, fontWeight: '700', paddingHorizontal: 20, textAlign: 'right', paddingBottom: 50}} >
-                -Johnny Bohorquez, creado el 29/11/21 - 
+                Condiciones de uso al usuario citadas de la ley de ayuda y protección de datos, edición 2028, consultada el día 29 de noviembre de 2021 
               </Text>
             </View>
           </View>
